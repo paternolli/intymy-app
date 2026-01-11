@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* íNtymy - Design System with Brand Colors */
+/* Primary: #FF2F76 | Gradient: #FF4F8B → #FF2F76 → #FF1E6D */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    /* Brand Pink: #FF2F76 */
+    --primary: 340 100% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    /* Gradient End: #FF1E6D - slightly darker accent */
+    --accent: 340 100% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 92%;
+    --input: 240 5% 92%;
+    --ring: 340 100% 59%;
+
+    --radius: 0.75rem;
+
+    --success: 150 60% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Gradient colors for custom use */
+    --gradient-start: 340 100% 65%;
+    --gradient-mid: 340 100% 59%;
+    --gradient-end: 340 100% 56%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 10%;
+    --sidebar-primary: 340 100% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 240 5% 92%;
+    --sidebar-ring: 340 100% 59%;
+  }
+
+  .dark {
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Brand Pink: #FF2F76 - slightly brighter in dark mode */
+    --primary: 340 100% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 55%;
+
+    --accent: 340 100% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --ring: 340 100% 62%;
+
+    /* Gradient colors for custom use */
+    --gradient-start: 340 100% 68%;
+    --gradient-mid: 340 100% 62%;
+    --gradient-end: 340 100% 58%;
+
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 340 100% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 5% 15%;
+    --sidebar-ring: 340 100% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .blur-content {
+    filter: blur(20px);
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Brand gradient utilities */
+  .bg-brand-gradient {
+    background: linear-gradient(135deg, #FF4F8B 0%, #FF2F76 50%, #FF1E6D 100%);
+  }
+
+  .bg-brand-gradient-horizontal {
+    background: linear-gradient(90deg, #FF4F8B 0%, #FF2F76 50%, #FF1E6D 100%);
+  }
+
+  .text-brand-gradient {
+    background: linear-gradient(135deg, #FF4F8B 0%, #FF2F76 50%, #FF1E6D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
