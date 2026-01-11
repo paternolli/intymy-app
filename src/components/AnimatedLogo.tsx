@@ -51,7 +51,7 @@ export function AnimatedLogo({ variant = 'header', className, showText = true }:
   const logoElement = (
     <img 
       src={logo} 
-      alt="íNtymy" 
+      alt="IntyMy Connect" 
       className={cn(
         sizes[variant],
         'object-contain transition-all duration-300',
@@ -76,7 +76,7 @@ export function AnimatedLogo({ variant = 'header', className, showText = true }:
           textSizes[variant],
           variant === 'header' && isScrolled && 'scale-95'
         )}>
-          íNtymy
+          IntyMy Connect
         </span>
       )}
     </div>
